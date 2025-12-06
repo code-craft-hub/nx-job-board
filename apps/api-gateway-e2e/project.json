@@ -1,0 +1,24 @@
+{
+  "name": "@my-fullstack-app3/api-gateway-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "implicitDependencies": [
+    "@my-fullstack-app3/api-gateway"
+  ],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{e2eProjectRoot}"
+      ],
+      "options": {
+        "jestConfig": "apps/api-gateway-e2e/jest.config.cts",
+        "passWithNoTests": true
+      },
+      "dependsOn": [
+        "@my-fullstack-app3/api-gateway:build",
+        "@my-fullstack-app3/api-gateway:serve"
+      ]
+    }
+  }
+}
