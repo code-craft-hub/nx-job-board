@@ -57,7 +57,8 @@
         "targetName": "test"
       },
       "exclude": [
-        "apps/api-gateway-e2e/**/*"
+        "apps/api-gateway-e2e/**/*",
+        "apps/products-e2e/**/*"
       ]
     }
   ],
